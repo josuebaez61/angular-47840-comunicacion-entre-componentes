@@ -1,0 +1,5 @@
+<ul [style.background-color]="backgroundColor">
+  <li (click)="onSelect.emit(item)" *ngFor="let item of items">
+    {{ item }}
+  </li>
+</ul>

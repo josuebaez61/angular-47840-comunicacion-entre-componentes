@@ -1,0 +1,23 @@
+<app-selectable-list
+  (onSelect)="onSelectUser($event)"
+  [items]="users"
+  backgroundColor="red"
+></app-selectable-list>
+
+<app-selectable-list
+  backgroundColor="green"
+  (onSelect)="onSelectUser($event)" [items]="courses"
+></app-selectable-list>
+
+<!--
+  []
+  ()
+  [()]
+
+
+
+  <ul>
+  <li style="cursor: pointer;" (click)="onSelectUser(user)" *ngFor="let user of users">
+    {{ user }}
+  </li>
+</ul> -->
