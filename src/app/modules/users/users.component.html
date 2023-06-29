@@ -1,18 +1,26 @@
-<app-selectable-list
+<!-- <app-selectable-list
   (onSelect)="onSelectUser($event)"
   [items]="users"
-  backgroundColor="red"
-></app-selectable-list>
+  backgroundColor="yellow"
+></app-selectable-list> -->
+
+<div #titulo>
+  Hola mundo
+</div>
 
 <app-selectable-list
   backgroundColor="green"
-  (onSelect)="onSelectUser($event)" [items]="courses"
+  (onSelect)="onSelectUser($event)"
+  [(items)]="courses"
 ></app-selectable-list>
 
+ELEMENTO PADRE = {{ courses }}
+
 <!--
-  []
-  ()
-  [()]
+  [] Entrada
+  () Salida
+
+  [()] Entrada/Salida
 
 
 

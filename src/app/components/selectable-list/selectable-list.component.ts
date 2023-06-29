@@ -11,6 +11,9 @@ export class SelectableListComponent {
   @Input()
   items: string[] = [];
 
+  @Output()
+  itemsChange = new EventEmitter();
+
   // ENTRADA
   // Aqui recibo que color de fondo deberia o tener la lista
   @Input()
@@ -20,4 +23,10 @@ export class SelectableListComponent {
   // Emito el item seleccionado
   @Output()
   onSelect = new EventEmitter();
+
+  removeItem(index: number): void {
+    this.itemsChange.emit(
+      this.items.filter((_, i) => i !== index)
+    );
+  }
 }

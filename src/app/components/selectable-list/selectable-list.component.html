@@ -1,5 +1,9 @@
 <ul [style.background-color]="backgroundColor">
-  <li (click)="onSelect.emit(item)" *ngFor="let item of items">
-    {{ item }}
+  <li *ngFor="let item of items; let i = index">
+    <span (click)="onSelect.emit(item)">{{ item }}</span>
+    <button (click)="removeItem(i)" class="btn btn-danger" type="button">X</button>
   </li>
 </ul>
+
+ELEMENTO HIJO= {{ items }}
+<br>

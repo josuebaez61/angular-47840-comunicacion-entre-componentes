@@ -1,1 +1,3 @@
-<app-users></app-users>
+<app-users *ngIf="showUsers"></app-users>
+
+<button (click)="showUsers = !showUsers">TOGGLE USERS</button>
